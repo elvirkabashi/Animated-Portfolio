@@ -1,6 +1,8 @@
 import { motion , useInView} from "framer-motion"
 import "./services.scss"
 import { useRef } from "react"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const variants = {
     initial:{
@@ -39,7 +41,7 @@ function Services() {
         </motion.div>
         <motion.div className="titleContainer" variants={variants}>
             <div className="title">
-                <img src="/people.webp" alt="" />
+                <LazyLoadImage src="/people.webp" alt="" effect="blur"/>
                 <h1>
                     <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
                 </h1>

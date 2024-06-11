@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import "./hero.scss"
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const textVariants = {
     initial: {
         x: -500,
@@ -56,7 +57,7 @@ function Hero() {
             FullSctack Web Applications
         </motion.div>
         <div className="imageContainer">
-            <img src="/me.png" alt="Elvir Kabashi" />
+            <LazyLoadImage src={'/me.png'} alt="Elvir Kabashi" effect="blur"/>
         </div>
     </div>
   )
